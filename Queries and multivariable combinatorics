@@ -1,0 +1,56 @@
+import sys
+
+data = sys.stdin.read()   # ['2','1','2','3','4','5','6']
+data = list(data)
+
+def count_letters(letter,combon):
+    count = 0
+    for n in range(len(combon)):
+        if letter == combon[n]:
+            count+=1
+    return count
+    
+def fill(letter,combon):
+    while count_letters(letter,combon)<= count_letters(letter,stringn) && a<=n:
+        combon[a] = letters[l]
+        a =+1
+    
+#print(data)
+N = int(data[0])
+#print(type(N))
+Q = int(data[2])
+stringn = [0]* N                         #applying Q to string
+for i in range(N):
+    stringn[i] = data[4 + i]
+for i in range(Q):
+    P = int(data[4 + N + 1 +4*i])
+    C = str(data[4 + N + 1 +4*i + 2])
+    stringn[P - 1] = C                   #applied q to string
+    
+    
+tally = []                           #creating list of numbers and corresponding tally
+letters = []
+for n in range(N):
+    for l in range(len(letters)+1):
+        print(l)
+        if l == len(letters):
+            letters = letters + [stringn[n]]
+            tally = tally + [1]
+            break
+        elif stringn[n] == letters[l]:
+            tally[l] = tally[l] + 1
+            break
+        
+        
+
+for n in range(N):
+    combon = [0]*N
+    for l in range(len(letters)):
+        fill(letters[l],combon)
+        if combon[-1] = letters[l]:
+            
+
+#letters = letters + [stringn[1]]
+print(stringn)
+print(letters)
+print(tally)
